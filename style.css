@@ -322,6 +322,7 @@ iframe {
 
 #contatos {
     background-image: url(images/wallpaper-contatosDark.jpg);
+    background-position: center top;
     width: 100%;
     height: auto;
 
