@@ -24,7 +24,6 @@ html {
     align-items: center;
     flex-direction: column;
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
 }
 
 #header {
@@ -162,7 +161,7 @@ nav {
     justify-content: center;
     border: none;
     margin: 1rem 0;
-    background-color: var(--color5);
+    background-color: #ffd2c0;
     padding: 1rem;
 }
 
@@ -292,6 +291,7 @@ iframe {
     align-items: center;
     flex-direction: column;
     margin-top: 2rem;
+    background-color: #ffd2c0;
 }
 
 #outros-servicos h3+img {
@@ -351,15 +351,22 @@ iframe {
 .socialMedias {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .socialMedias a {
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
     text-decoration: underline;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 #local-contato:hover #line1-local {
@@ -446,6 +453,10 @@ footer p {
     color: var(--color1);
 }
 
+section {
+    padding-top: 46px;
+    padding-bottom: 46px;
+}
 
 
 /* -------------------------------------- */
