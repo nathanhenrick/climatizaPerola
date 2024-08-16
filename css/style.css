@@ -29,6 +29,7 @@ html {
 #header {
     background-color: var(--color2);
     width: 100%;
+    height: 42px;
     border: none;
     position: inherit;
     display: flex;
@@ -53,10 +54,21 @@ html {
     color: var(--color4);
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav a {
     color: white;
     text-decoration: none;
     cursor: pointer;
+}
+
+nav a:hover {
+    color: var(--color4);
+    text-decoration: none;
 }
 
 #logo-header {
@@ -66,24 +78,25 @@ nav a {
     height: 42px;
 }
 
-#container-menu {
+#containerMenu {
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-around;
     list-style: none;
-    padding: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
     font-size: 12px;
 }
 
-.menu {
+.menu_ {
     padding: 5px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 #hero {
@@ -104,7 +117,7 @@ nav {
 }
 
 .carousel-inner {
-    width: 100vw;
+    width: 100%;
 }
 
 #hero>h1 {
@@ -149,18 +162,20 @@ nav {
 }
 
 #home {
-    /* height: 100vh; */
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .carousel-inner img {
     height: 500px;
-    /* Exemplo de altura fixa */
+    max-width: 100%;
 }
 
 .carousel-indicators li {
-    background-color: #000;
-    /* Cor dos indicadores */
+    background-color: var(--color2);
 }
 
 #home>p {
@@ -179,19 +194,17 @@ nav {
     justify-content: center;
     border: none;
     margin: 1rem 0;
-    background-color: #ffd2c0;
+    background-color: #F4F4F4;
     padding: 1rem;
 }
 
-#container-box p {
-    text-align: justify;
-}
 
 .home-image {
     background-image: url(../images/img-homeDark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    box-sizing: border-box;
 
     width: 100%;
     height: 240px;
@@ -233,6 +246,7 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 
     outline: 2px solid var(--color2);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.324);
@@ -248,6 +262,7 @@ iframe {
     color: var(--color4);
     font-size: 24px;
     font-weight: 400;
+    text-align: center;
 }
 
 #servicos p {
@@ -308,10 +323,19 @@ iframe {
     align-items: center;
     flex-direction: column;
     margin-top: 2rem;
-    background-color: #ffd2c0;
 }
 
-#outros-servicos h3+img {
+#backgroundDesign {
+    background-color: #F4F4F4;
+    padding: 1rem;
+}
+
+#outros-servicos h2,
+#outros-servicos h3 {
+    text-align: center;
+}
+
+#outros-servicos img {
     width: 100%;
     margin-bottom: 5rem;
 }
@@ -342,6 +366,7 @@ iframe {
     background-position: center top;
     width: 100%;
     height: auto;
+    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
@@ -541,5 +566,40 @@ section {
         content: url('../images/carrosselTeste/fourth.jpeg');
     }
 
-    
+    #container-box {
+        margin: 0 auto;
+        max-width: 75%;
+        text-align: justify;
+    }
+
+    #servicos {
+        margin: 0 auto;
+        width: 60%;
+    }
+    #contato {
+        background-color: var(--color2);
+    }
+
+    #outros-servicos {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #outros-servicos p {
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    #atendimento {
+        width: 60%;
+        background-color: transparent;
+        padding-top: 0;
+    }
+    #atendimento h3,
+    #atendimento p {
+        color: white;
+    }
 }
