@@ -87,16 +87,24 @@ nav {
 }
 
 #hero {
-    background-image: url(images/wallpaper-hero.jpg);
+    background-image: url(../images/wallpaper-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0;
 
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.img-responsive {
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    width: 100vw;
 }
 
 #hero>h1 {
@@ -145,6 +153,16 @@ nav {
     background-color: white;
 }
 
+.carousel-inner img {
+    height: 500px;
+    /* Exemplo de altura fixa */
+}
+
+.carousel-indicators li {
+    background-color: #000;
+    /* Cor dos indicadores */
+}
+
 #home>p {
     color: #121619;
 }
@@ -170,11 +188,10 @@ nav {
 }
 
 .home-image {
-    background-image: url(images/img-homeDark.jpg);
+    background-image: url(../images/img-homeDark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /* background-attachment: fixed; */
 
     width: 100%;
     height: 240px;
@@ -321,7 +338,7 @@ iframe {
 
 
 #contatos {
-    background-image: url(images/wallpaper-contatosDark.jpg);
+    background-image: url(../images/wallpaper-contatosDark.jpg);
     background-position: center top;
     width: 100%;
     height: auto;
@@ -450,6 +467,7 @@ footer {
     padding: 1rem;
     text-align: center;
 }
+
 footer p {
     color: var(--color1);
 }
@@ -502,4 +520,26 @@ section {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* TABLET OU MAIOR */
+    .carousel-item:nth-child(1) img {
+        content: url('../images/carrosselTeste/first.jpeg');
+    }
+
+    .carousel-item:nth-child(2) img {
+        content: url('../images/carrosselTeste/second.jpg');
+    }
+
+    .carousel-item:nth-child(3) img {
+        content: url('../images/carrosselTeste/third.jpg');
+    }
+
+    .carousel-item:nth-child(4) img {
+        content: url('../images/carrosselTeste/fourth.jpeg');
+    }
+
+    
 }

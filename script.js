@@ -1,5 +1,4 @@
-//header SCROLL
-// Seleciona o header
+//* HEADER SCROLL
 const header = document.getElementById("header");
 
 function checkScroll() {
@@ -10,13 +9,12 @@ function checkScroll() {
   }
 }
 
-// Adiciona um listener de scroll na janela
 window.addEventListener("scroll", checkScroll);
 
-//topButton
-const backToTopBtn = document.querySelector(".Btn");
+//* TOPBUTTON
+const toTopButton = document.querySelector(".Btn");
 
-backToTopBtn.addEventListener("click", () => {
+toTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -25,8 +23,8 @@ backToTopBtn.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
-    backToTopBtn.style.display = "flex";
+    toTopButton.style.display = "flex";
   } else {
-    backToTopBtn.style.display = "none";
+    toTopButton.style.display = "none";
   }
 });
