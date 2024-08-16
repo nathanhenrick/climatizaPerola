@@ -76,6 +76,7 @@ nav a:hover {
     padding: 5px;
     width: 42px;
     height: 42px;
+    user-select: none;
 }
 
 #containerMenu {
@@ -90,7 +91,7 @@ nav a:hover {
     font-size: 12px;
 }
 
-.menu_ {
+.menu {
     padding: 5px;
 }
 
@@ -111,6 +112,11 @@ nav {
     flex-direction: column;
 }
 
+#hero h1,
+#hero h2 {
+    user-select: none;
+}
+
 .img-responsive {
     display: block;
     margin: 0 auto;
@@ -120,14 +126,14 @@ nav {
     width: 100%;
 }
 
-#hero>h1 {
+#hero h1 {
     font-family: "Jura", system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     font-size: 40px;
     font-weight: 400;
 }
 
-#hero>h2 {
+#hero h2 {
     color: var(--color5);
     font-size: 14px;
     font-weight: 400;
@@ -397,19 +403,30 @@ iframe {
     justify-content: center;
     gap: 1rem;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .socialMedias a {
-    text-decoration: underline;
-
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     color: #fff;
     text-decoration: none;
     font-weight: 400;
     letter-spacing: 1px;
     cursor: pointer;
+
+    text-decoration: underline;
+}
+
+.scoialMedias a p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #local-contato:hover #line1-local {
@@ -535,6 +552,23 @@ section {
     animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+/* * scroll bar * */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color5);
+}
+
 @keyframes slide-in-bottom {
     0% {
         transform: translateY(10px);
@@ -576,6 +610,7 @@ section {
         margin: 0 auto;
         width: 60%;
     }
+
     #contato {
         background-color: var(--color2);
     }
@@ -598,6 +633,7 @@ section {
         background-color: transparent;
         padding-top: 0;
     }
+
     #atendimento h3,
     #atendimento p {
         color: white;
