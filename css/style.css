@@ -105,7 +105,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
 
-    height: 100vh;
+    height: calc(100vh - 36px);
     display: flex;
     align-items: center;
     justify-content: center;
